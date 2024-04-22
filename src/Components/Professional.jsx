@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
 
 const Professional = (props) => {
     const { title, details, href} = props;
@@ -31,7 +32,7 @@ const Professional = (props) => {
                         Con CitasFacil !Tienes el consultorio en tus manos!
                     </p>
                     
-                    <a class="absolute py-3 px-3 text-md font-medium rounded-[1.8rem] bg-yellow-600 text-white hover:bg-indigo-700 shadow-xl hover:border-none hover:text-cyan-300 
+                    <Link className="absolute py-3 px-3 text-md font-medium rounded-[1.8rem] bg-yellow-600 text-white hover:bg-indigo-700 shadow-xl hover:border-none hover:text-cyan-300 
                     ml-[10rem] mt-[12rem]
                     mbxl:ml-[12rem] mbxl:mt-[13rem]
                     mbxx:ml-[14rem] mbxx:mt-[17rem]
@@ -39,9 +40,9 @@ const Professional = (props) => {
                     lg:ml-[34rem] lg:mt-[30rem] lg:text-4xl lg:rounded-[1.5rem]
                     xl:text-4xl xl:ml-[43rem] xl:mt-[32rem]
                     2xl:text-6xl 2xl:ml-[85rem] 2xl:mt-[60rem]" 
-                    href="#">
+                    to="/checkin">
                     Registrate hoy!
-                    </a>
+                    </Link>
                 </div>
             </professional-panel>
         </>

@@ -1,22 +1,17 @@
 
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 
-//import Home from '../App';
-import Directory from './Directory/Directory';
-//const Directory = ()=><h1>Directory test</h1>
+
 
 const Navbar = () => {
-    // State to manage the navbar's visibility
     const [nav, setNav] = useState(false);
 
-    // Toggle function to handle the navbar's display
     const handleNav = () => {
         setNav(!nav);
     };
 
-    // Array containing navigation items
     const navItems = [
         { id: 1, text: 'Directorio Médico', href:'/directory' },
         { id: 2, text: 'Nosotros', href:'/aboutus' },
@@ -26,7 +21,7 @@ const Navbar = () => {
     ];
 
     return (
-        <Router>
+        <>    
             <div className="bg-gradient-to-r from-blue-600 to-sky-400 dark:bg-gray-900">
                 <div className="max-w-screen-3xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <Link  className="flex items-center space-x-3 rtl:space-x-reverse " to="/">
@@ -93,9 +88,8 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>    
-            </div>
-            {/*<Route path="/directory" Component={<Directory/>}/>*/}
-        </Router>            
+            </div>            
+        </>         
     );
 }
 export default Navbar;
